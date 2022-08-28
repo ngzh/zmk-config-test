@@ -6,16 +6,17 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
-#include "weekin840_m2_pins.dtsi"
+#include "arduino_pro_micro_pins.dtsi"
 
 / {
-	model = "Weekin nRF52840 M.2 module";
-	compatible = "weekin,weekin840_m2";
+	model = "nrfmicro";
+	compatible = "joric,nrfmicro";
 
 	chosen {
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
+		zephyr,console = &cdc_acm_uart;
 	};
 
 	leds {
@@ -26,24 +27,11 @@
 		};
 	};
 
-	// ext-power {
-	// 	compatible = "zmk,ext-power-generic";
-	// 	label = "EXT_POWER";
-	// 	control-gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
-	// };
-
-	vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		label = "BATTERY";
-		io-channels = <&adc 2>;
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 820000)>;
+	ext-power {
+		compatible = "zmk,ext-power-generic";
+		label = "EXT_POWER";
+		control-gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
 	};
-
-};
-
-&adc {
-	status = "okay";
 };
 
 &gpiote {
@@ -71,8 +59,11 @@
 };
 
 &usbd {
-	compatible = "nordic,nrf-usbd";
 	status = "okay";
+	cdc_acm_uart: cdc_acm_uart {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
 };
 
 
