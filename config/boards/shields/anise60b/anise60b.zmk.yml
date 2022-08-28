@@ -1,0 +1,12 @@
+file_format: "1"
+id: anise60b
+name: Anise60B Rev. 1
+type: shield
+url: https://github.com/ngzh/anise60b
+requires: [pro_micro]
+features:
+  - keys
+  - underglow
+siblings:
+  - anise60b_left
+  - anise60b_right

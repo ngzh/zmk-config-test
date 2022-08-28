@@ -14,6 +14,6 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: quefrency_left 
+    shield: anise60b_left 
   - board: nrfmicro_13
-    shield: quefrency_right 
+    shield: anise60b_right 
