@@ -106,6 +106,7 @@
     };
 };
 
+
 //     kbd_func_layer {
 //             bindings = <
 //     &bt BT_CLR &bt_s0       &bt_s1       &bt_s2       &bt_s3       &out OUT_BLE &out OUT_USB /**/   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0  &trans  &trans  &trans
