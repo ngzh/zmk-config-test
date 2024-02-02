@@ -4,7 +4,7 @@ name: Build
 
 jobs:
   matrix:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Fetch Build Keyboards
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
@@ -20,7 +20,7 @@ jobs:
           yaml2json build.yaml
           echo "::set-output name=matrix::${matrix}"
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
       image: zmkfirmware/zmk-build-arm:3.0
     needs: matrix
