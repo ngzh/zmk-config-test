@@ -1,0 +1,10 @@
+file_format: "1"
+id: anisectlp
+name: AniseCTL community 0.8/0.9/1.0
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/ngzh/anisectl/
+exposes: [anise_ctl]

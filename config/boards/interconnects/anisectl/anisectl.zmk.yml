@@ -1,0 +1,8 @@
+file_format: "1"
+id: anisectl
+name: Anise CTL
+type: interconnect
+url: https://www.sparkfun.com/products/12640
+manufacturer: ngzh
+description: |
+  30 pin BtB interconnect, for anise keyboard and more

@@ -1,0 +1,10 @@
+file_format: "1"
+id: anisectlp_01
+name: anisectlp 0.1
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/ngzh/anisectlp/
+exposes: [anise_ctl]
