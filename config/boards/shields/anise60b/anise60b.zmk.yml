@@ -3,7 +3,7 @@ id: anise60b
 name: Anise60B Rev. 1
 type: shield
 url: https://github.com/ngzh/anise60b
-requires: [pro_micro]
+requires: [anise_ctl]
 features:
   - keys
   - underglow

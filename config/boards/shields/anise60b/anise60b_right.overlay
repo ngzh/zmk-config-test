@@ -20,8 +20,27 @@
         label = "KSCAN";
         diode-direction = "col2row";
 
+        col-gpios
+            = <&anise_ctl 21 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 22 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 23 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 24 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 25 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 26 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 27 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 28 GPIO_ACTIVE_HIGH>
+            ;
 
+        row-gpios
+            = <&anise_ctl 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
 
+/*
+ * for promicro interconnect
         col-gpios
             = <&pro_micro 0 GPIO_ACTIVE_HIGH>
             , <&pro_micro 16 GPIO_ACTIVE_HIGH>
@@ -40,5 +59,6 @@
             , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+ */
     };
 };

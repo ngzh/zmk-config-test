@@ -13,7 +13,7 @@
 #
 ---
 include:
-  - board: nrfmicro_13
+  - board: anisectlc_10
     shield: anise60b_left 
-  - board: nrfmicro_13
+  - board: anisectlc_10
     shield: anise60b_right 
