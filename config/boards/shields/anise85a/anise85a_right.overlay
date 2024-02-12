@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "anise85a.dtsi"
+
+&default_transform {
+    col-offset = <7>;
+};
+
+/ {
+    /* This kscan is for the 60% left half without macro keys the
+     * macro pad layout may require different column and row pins
+     */
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+
+        col-gpios
+            = <&anise_ctl 21 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 22 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 23 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 24 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 25 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 26 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 27 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 28 GPIO_ACTIVE_HIGH>
+            , <&anise_ctl 31 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&anise_ctl 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&anise_ctl 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+
+    };
+};

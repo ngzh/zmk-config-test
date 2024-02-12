@@ -1,0 +1,20 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+ 
+ 
+if SHIELD_ANISE85A_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "ANISE85A"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_ANISE85A_LEFT || SHIELD_ANISE85A_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif

@@ -1,0 +1,12 @@
+file_format: "1"
+id: anise85a
+name: Anise85A Rev. 1
+type: shield
+url: https://github.com/ngzh/anise85a
+requires: [anise_ctl]
+features:
+  - keys
+  - underglow
+siblings:
+  - anise85a_left
+  - anise85a_right
